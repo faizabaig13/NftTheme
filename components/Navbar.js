@@ -113,7 +113,7 @@ return (
      <input type="text" placeholder="Search here..." className={styles.input}/>
     </div>
     <button type="button"  className={styles.wltbtn} onClick={()=> setOpenModal(true)}><img src="/wallet2.png" alt="" width={"30px"}/>Wallet</button>
-	<WallerModal open={openModal} onClose={()=> setOpenModal(false)}/>
+	 <WalletModal open={openModal} onClose={()=> setOpenModal(false)}/>
 	
 						<div className="mr-10 flex md:hidden ">
 							<button
