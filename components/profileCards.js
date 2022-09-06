@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import profileUsers from './profileUsers'
-const profileCards = () => {
+const ProfileCards = () => {
     useEffect(()=>{
         Aos.init({duration:500})
         },[])
@@ -14,6 +14,7 @@ const profileCards = () => {
 
     {profileUsers.map((e)=>{
        return (
+         <>
         <div className="mycolumncard mb-10">
         <div className="profileCard" data-aos="zoom-out-up">
     <img src={e.UserImg}/>
@@ -22,7 +23,7 @@ const profileCards = () => {
     <button className='profilebtn'>FOLLOW</button>
         </div>
     </div>
-    
+    </>
     
      );})}
     </div>
@@ -31,4 +32,4 @@ const profileCards = () => {
   )
 }
 
-export default profileCards
+export default ProfileCards

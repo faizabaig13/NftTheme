@@ -6,7 +6,7 @@ import "aos/dist/aos.css"
 import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
 import { motion } from 'framer-motion';
 
-const liveactioncards = () => {
+const Liveactioncards = () => {
   const [openModal,setOpenModal] = useState(false)
 
 useEffect(()=>{
@@ -27,26 +27,27 @@ Aos.init({duration:500})
  
 {cardsUser.map((e)=>{
        return (
+         <>
         <div className="mycolumn mb-10">
-        <div class="nft">
-        <div class='main'>
-          <img class='tokenImage' src={e.Imgsrc} alt="NFT"  />
+        <div className="nft">
+        <div className='main'>
+          <img className='tokenImage' src={e.Imgsrc} alt="NFT"  />
           <h2>{e.name}</h2>
-          <p class='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <div class='tokenInfo'>
-            <div class="price">
+          <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <div className='tokenInfo'>
+            <div className="price">
               <ins>◘</ins>
               <p>0.031 ETH</p>
             </div>
-            <div class="duration">
+            <div className="duration">
          
              <button onClick={()=> setOpenModal(true)}>Place bid</button>
             
             </div>
           </div>
           <hr />
-          <div class='creator'>
-            <div class='wrapper'>
+          <div className='creator'>
+            <div className='wrapper'>
               <img src={e.profileImg} alt="Creator" />
             </div>
             
@@ -56,7 +57,7 @@ Aos.init({duration:500})
         </div>
         <Placebidmodal open={openModal} onClose={()=> setOpenModal(false)}/>
         </div>
-    
+        </>
      );})}
 </div>
 
@@ -67,7 +68,7 @@ Aos.init({duration:500})
   )
 }
 
-export default liveactioncards
+export default Liveactioncards
 
 
 

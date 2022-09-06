@@ -16,31 +16,31 @@ const secondCardsContainer = () => {
 {Nftcreaters.map((e)=>{
        return (
          <>
-   <main class="card-main">
-  <div class="card-wrapper">
-    <div class="card-image">
+   <main className="card-main">
+  <div className="card-wrapper">
+    <div className="card-image">
       <img src={e.nftpic} alt="equilibrium" />
     </div>
-    <div class="card-details">
-      <div class="card-text">
+    <div className="card-details">
+      <div className="card-text">
         <a href="#">
           <h1>{e.name}</h1>
         </a>
       
       </div>
-      <div class="card-stats">
-        <div class="amount">
+      <div className="card-stats">
+        <div className="amount">
           <img src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_nft-preview-card-component/main/images/icon-ethereum.svg" alt="ethereum icon" />
           <span>{e.nft} ETH</span>
         </div>
-        <div class="time">
+        <div className="time">
         
           <button className='nftcard-btn'>Place a bid</button>
         </div>
       </div>
     </div>
-    <div class="card-author">
-      <div class="author-avater">
+    <div className="card-author">
+      <div className="author-avater">
         <img src={e.Imgsrc} alt="owner image" />
       </div>
       <p>by <a href="#">{e.username}</a></p>
@@ -52,7 +52,7 @@ const secondCardsContainer = () => {
      );})}
 
 </div>
-<div class="bg-fixed bgimg mt-10 w-100">
+<div className="bg-fixed bgimg mt-10 w-100">
 
 </div>
 </div>

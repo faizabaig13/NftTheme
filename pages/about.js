@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react'
 
 import Users from './users'
-import Cards from './liveactioncards'
+import Cards from './Liveactioncards'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 // import Modal from '../components/Modal'
 
-const about = () => {
+const About = () => {
   useEffect(()=>{
     Aos.init({duration:500})
     },[])
   return (
 
     <div className="container max-w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-5 bggradient">
-   <div class="flex justify-center flexcontainer mx-auto" data-aos="zoom-out-right">
+   <div className="flex justify-center flexcontainer mx-auto" data-aos="zoom-out-right">
 
 {Users.map((e)=>{
        return (
@@ -47,4 +47,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

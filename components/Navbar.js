@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 import { animate, motion } from 'framer-motion'
 import styles from '../styles/Home.module.css'
-import WallerModal from './walletModal'
+import WallerModal from './WalletModal'
 // import Logo from "../public/streamlineLogo.png";
 
 function Navbar() {
@@ -38,7 +38,7 @@ return (
     transition={{duration:0.3,delay: 0 * 0.2}}
     >
 		<div>
-		<nav class={navbar ? 'bg-[#09032B] px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0  border-gray-200 dark:border-gray-600'  : 'px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-gray-200 dark:border-gray-600'}>
+		<nav className={navbar ? 'bg-[#09032B] px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0  border-gray-200 dark:border-gray-600'  : 'px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-gray-200 dark:border-gray-600'}>
 				<div className="w-ful">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
@@ -50,7 +50,7 @@ return (
 							<div className="hidden md:block">
 								<div className="ml-10 flex items-baseline space-x-4 hover:transition-all">
 									<Link
-										activeClass="Home"
+										activeclassName="Home"
 										to="about"
 										smooth={true}
 										offset={50}
@@ -60,7 +60,7 @@ return (
 										Home
 									</Link>
 									<Link
-										activeClass="about"
+										activeclassName="about"
 										to="about"
 										smooth={true}
 										offset={50}
@@ -70,7 +70,7 @@ return (
 	Explore
 									</Link>
 									<Link
-										activeClass="work"
+										activeclassName="work"
 										to="work"
 										smooth={true}
 										offset={50}
@@ -81,7 +81,7 @@ return (
 									</Link>
 
 									<Link
-										activeClass="Services"
+										activeclassName="Services"
 										to="work"
 										smooth={true}
 										offset={50}
@@ -92,7 +92,7 @@ return (
 									</Link>
 
 									<Link
-										activeClass="contact"
+										activeclassName="contact"
 										to="contact"
 										smooth={true}
 										offset={50}
@@ -105,10 +105,10 @@ return (
 								</div>
 							</div>
 						</div>
-            <div class="hidden relative md:block m-10">
-      <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none mr-5 pr-5">
+            <div className="hidden relative md:block m-10">
+      <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none mr-5 pr-5">
       <img src="/search.png" alt="" width={"20px"}/>
-        <span class="sr-only">Search icon</span>
+        <span className="sr-only">Search icon</span>
       </div>
      <input type="text" placeholder="Search here..." className={styles.input}/>
     </div>
@@ -184,7 +184,7 @@ return (
 							>
 								<Link
 									href="/home"
-									activeClass="home"
+									activeclassName="home"
 									to="home"
 									smooth={true}
 									offset={50}
@@ -195,7 +195,7 @@ return (
 								</Link>
 								<Link
 									href="/about"
-									activeClass="about"
+									activeclassName="about"
 									to="about"
 									smooth={true}
 									offset={50}
@@ -207,7 +207,7 @@ return (
 
 								<Link
 									href="/work"
-									activeClass="work"
+									activeclassName="work"
 									to="work"
 									smooth={true}
 									offset={50}
@@ -218,7 +218,7 @@ return (
 								</Link>
 								<Link
 									href="/services"
-									activeClass="services"
+									activeclassName="services"
 									to="services"
 									smooth={true}
 									offset={50}
@@ -230,7 +230,7 @@ return (
 
 								<Link
 									href="/contact"
-									activeClass="work"
+									activeclassName="work"
 									to="work"
 									smooth={true}
 									offset={50}
@@ -241,10 +241,10 @@ return (
 								</Link>
 
                 <form>   
-    <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+    <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
     <div className="relative">
         <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-            <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
         </div>
         <input type="search" id="default-search" className=" outline-none block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Search Mockups, Logos..." required=""/>
         <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-[#581c87] hover:bg-[#0f044a] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>

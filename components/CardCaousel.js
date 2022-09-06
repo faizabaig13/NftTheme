@@ -48,12 +48,12 @@ export default class Responsive extends Component {
       <Slider {...settings} data-aos="fade-right" >
       {CardsCarouselData.map((e)=>{
              return (
-            
-              <div class="nft bg-mycardsbg mt-5 mb-10 p-5 border-gray-800 rounded-lg border  shadow-2xl">
-              <div class='main'>
-              <div class="flex space-x-4 mymx">
+            <>
+              <div className="nft bg-mycardsbg mt-5 mb-10 p-5 border-gray-800 rounded-lg border  shadow-2xl">
+              <div className='main'>
+              <div className="flex space-x-4 mymx">
   <div><img src={e.mainImg1} className="space-x-4 userimgcard rounded-md mt-2"/></div>
-  <div class="flex flex-col ... w-96">
+  <div className="flex flex-col ... w-96">
   <div><img src={e.smallImg1} className="space-x-4 userimgcardsmall rounded-md  mt-2"/></div>
   <div><img src={e.smallImg2} className="userimgcardsmall rounded-md  mt-2"/></div>
   <div><img src={e.smallImg3} className="userimgcardsmall rounded-md mt-2"/></div>
@@ -61,8 +61,8 @@ export default class Responsive extends Component {
 </div>
                 <h2>{e.name}</h2>
                
-                <div class='creator'>
-                  <div class='wrapper'>
+                <div className='creator'>
+                  <div className='wrapper'>
                     <img src={e.Imgsrc} alt="Creator" />
                   </div>
                   <p><ins>Creation of</ins><span className='text-white'> NFT</span> </p>
@@ -70,7 +70,7 @@ export default class Responsive extends Component {
               </div>
               </div>
 
-         
+              </>
           
            );})}
            </Slider>
