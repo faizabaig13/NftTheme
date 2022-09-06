@@ -3,8 +3,7 @@ import cardsUser from './CardsUsers'
 import Placebidmodal from './placebidmodal'
 import Aos from 'aos'
 import "aos/dist/aos.css"
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
-import { motion } from 'framer-motion';
+
 
 const Liveactioncards = () => {
   const [openModal,setOpenModal] = useState(false)

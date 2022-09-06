@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 import { animate, motion } from 'framer-motion'
 import styles from '../styles/Home.module.css'
-import WallerModal from './WalletModal'
+import WalletModal from './walletModal'
 // import Logo from "../public/streamlineLogo.png";
 
 function Navbar() {
