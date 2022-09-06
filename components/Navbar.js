@@ -5,10 +5,10 @@ import { Link } from "react-scroll";
 
 import { animate, motion } from 'framer-motion'
 import styles from '../styles/Home.module.css'
-import walletModal from './walletModal'
+import WalletModal from './walletModal.js'
 // import Logo from "../public/streamlineLogo.png";
 
-function Navbar() {
+function Navbar() { 
 	const [isOpen, setIsOpen] = useState(false);
   const [navbar,setNavbar] = useState(false)
 const [openModal,setOpenModal] = useState(false)
@@ -113,7 +113,7 @@ return (
      <input type="text" placeholder="Search here..." className={styles.input}/>
     </div>
     <button type="button"  className={styles.wltbtn} onClick={()=> setOpenModal(true)}><img src="/wallet2.png" alt="" width={"30px"}/>Wallet</button>
-	 <walletModal open={openModal} onClose={()=> setOpenModal(false)}/>
+	 <WalletModal open={openModal} onClose={()=> setOpenModal(false)}/>
 	
 						<div className="mr-10 flex md:hidden ">
 							<button
