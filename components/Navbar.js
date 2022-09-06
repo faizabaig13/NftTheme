@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 
 import { animate, motion } from 'framer-motion'
 import styles from '../styles/Home.module.css'
-import WalletModal from './walletModal'
+import walletModal from './walletModal'
 // import Logo from "../public/streamlineLogo.png";
 
 function Navbar() {
@@ -113,7 +113,7 @@ return (
      <input type="text" placeholder="Search here..." className={styles.input}/>
     </div>
     <button type="button"  className={styles.wltbtn} onClick={()=> setOpenModal(true)}><img src="/wallet2.png" alt="" width={"30px"}/>Wallet</button>
-	 <WalletModal open={openModal} onClose={()=> setOpenModal(false)}/>
+	 <walletModal open={openModal} onClose={()=> setOpenModal(false)}/>
 	
 						<div className="mr-10 flex md:hidden ">
 							<button

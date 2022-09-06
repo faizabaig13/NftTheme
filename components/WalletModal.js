@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WalletModal = ({open,onClose}) => {
+const walletModal = ({open,onClose}) => {
     if(!open) return null
   return (
 
@@ -65,4 +65,4 @@ const WalletModal = ({open,onClose}) => {
   )
 }
 
-export default WalletModal
+export default walletModal
